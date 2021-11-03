@@ -16,7 +16,7 @@ public abstract class Coin {
 	@param v is the coin's value I.E. 0.25
 	@param c is the coin's code I.E. USD
     */
-    public Cookie(String t, double v, String c) {
+    public Coin(String t, double v, String c) {
 	type = t;
 	value = v;
 	code = c;
