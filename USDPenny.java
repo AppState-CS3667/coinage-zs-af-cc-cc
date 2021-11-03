@@ -14,7 +14,5 @@ public class USDPenny extends Coin {
     */
     public USDPenny() {
 	super("Penny", 0.25, "USD");
-    }
-
- 
+    } 
 }
