@@ -1,6 +1,6 @@
 # coins-starter
 
-F1 - Coin factory
+F1 - Coin factory (Adam: makefile, Zach: factory)
 
 F2 - Smelting strategy
 
