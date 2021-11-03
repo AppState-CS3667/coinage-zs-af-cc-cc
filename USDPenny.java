@@ -1,5 +1,5 @@
 /**
- * USDPenny is a realization of the cookie abstraction.
+ * USDPenny is a realization of the coin abstraction.
  *
  * @author Zach Shaffer
  * @version Nov 2021
