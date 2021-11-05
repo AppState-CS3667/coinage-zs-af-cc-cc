@@ -13,6 +13,6 @@ public class USDPenny extends Coin {
        USDPenny knows its attribute values.
     */
     public USDPenny() {
-	super("Penny", 0.25, "USD");
+	super("Penny", 0.01, "USD");
     } 
 }
