@@ -19,8 +19,9 @@ public class CoinFactory
  	* @param type Takes the type of coin in and creates the base I.E. USDQuarter
  	* @return cc Returns the final coin to move on to the mint
  	*/	 	
-	public Coin createCoin(String type) 
+	public Coin createCoin(String type, double val) 
 	{
+		Mint mm = null;
 		Coin cc = null;
 		Class cl = null;
 		try {	cl = Class.forName(type); }
@@ -30,7 +31,7 @@ public class CoinFactory
 			e.printStackTrace(); 
 		}
 		Object o = null;
-		if (cc == null)
+		if (mm == null)
 		{
 			try 
 			{ 
@@ -46,7 +47,7 @@ public class CoinFactory
 				System.err.println("Not able to access."); 
 				e.printStackTrace(); 
 			}
-			cc = (Coin) o;			
+			cc = (Coin) o.makeCoin(val);			
 		}	
 		return cc;
 	}
