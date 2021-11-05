@@ -6,7 +6,7 @@ import java.util.Random;
  * @author Chris Carter
  *
  */
-public abstract class Impriner {
+public class Impriner {
 	protected static Random rng = new Random();
 	/**
 	 * Takes a coin object, and returns true if it passes inspection or false if it fails.
@@ -30,7 +30,7 @@ public abstract class Impriner {
 			return false;
 		}
 		System.out.println("Smoothing Passed.");
-		return false;
+		return true;
 	}
 	/**
 	 * Takes a coin object, and returns true if it passes buffing or false if it fails.
@@ -42,6 +42,6 @@ public abstract class Impriner {
 			return false;
 		}
 		System.out.println("Buffing Passed.");
-		return false;	
+		return true;	
 	}
 }
