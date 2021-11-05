@@ -6,7 +6,7 @@
  */
 public abstract class Coin {
     private String type;
-    private int value;
+    private double value;
     private String code;
 
     /**
