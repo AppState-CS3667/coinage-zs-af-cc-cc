@@ -29,10 +29,10 @@ public class CoinFactory
 			System.err.println("Mint class not found."); 
 			e.printStackTrace(); 
 		}
-		Object o = null;
+		Mint o = null;
 		try 
 		{ 
-			o = cl.newInstance(); 
+			o = (Mint) cl.newInstance(); 
 		} 	
 		catch (InstantiationException e) 
 		{
