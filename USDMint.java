@@ -1,3 +1,9 @@
+/**
+ * USDMint creates US coin objects.
+ *
+ * @author Adam Farshchi
+ * @version Nov 2021
+ */
 public class USDMint extends Mint {
     protected Coin createCoin(double den) {
         if (den == 1.00)
@@ -26,7 +32,7 @@ public class USDMint extends Mint {
         }
         else
         {
-            return null;
+            return Coin.NULL;
         }
     }
 }

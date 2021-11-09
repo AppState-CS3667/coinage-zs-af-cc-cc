@@ -54,5 +54,22 @@ public abstract class Coin {
 	return "[" 
 	    + getCode() + getType() + ": worth $" + getValue()  + "]";
     }
-}
 
+    /**
+     * Null coin nested class to handle failures when making coins.
+     */
+    private static class NullCoin extends Coin {
+        public NullCoin()
+        {
+            super("Null", 0, "Null");
+        }
+
+        public String toString() {
+            return "Could not make coin.";
+        }
+
+        
+    }
+    
+    public static Coin NULL = new NullCoin();
+}
