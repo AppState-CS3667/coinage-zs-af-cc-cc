@@ -8,7 +8,7 @@ public class Demo {
         
         //Method two:
         CoinFactory fact = new CoinFactory();
-        Coin c = fact.createCoin("USDMint",0.25);
+        c = fact.createCoin("USDMint",0.25);
         System.out.println(c);
     } 
 }
