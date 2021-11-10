@@ -50,6 +50,5 @@ public class Demo {
         }
         while (d != 0);
         keyboard.close();
-        
     } 
 }
