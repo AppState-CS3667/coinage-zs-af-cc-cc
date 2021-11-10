@@ -1,3 +1,9 @@
+/**
+ * Mint abstraction.
+ *
+ * @author Adam Farshchi
+ * @version Nov 2021
+ */
 public abstract class Mint {
     public Coin makeCoin(double den) {
         Coin c;
