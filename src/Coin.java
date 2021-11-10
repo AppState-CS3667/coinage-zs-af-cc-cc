@@ -62,10 +62,11 @@ public abstract class Coin {
      * Null coin nested class to handle failures when making coins.
      */
     private static class NullCoin extends Coin {
-        public NullCoin()
+        private NullCoin()
         {
-            super("Null", 0, "Null");
+            super("", 0, "");
         }
+        
 
         public String toString() {
             return "Could not manufacture coin.";
