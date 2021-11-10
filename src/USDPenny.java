@@ -14,5 +14,6 @@ public class USDPenny extends Coin {
     */
     public USDPenny() {
 	super("Penny", 0.01, "USD");
+    smelt = new Smelt1();
     } 
 }

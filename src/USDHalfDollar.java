@@ -14,5 +14,6 @@ public class USDHalfDollar extends Coin {
     */
     public USDHalfDollar() {
 	super("Half Dollar", 0.50, "USD");
+    smelt = new Smelt3();
     } 
 }

@@ -14,5 +14,6 @@ public class USDNickel extends Coin {
     */
     public USDNickel() {
 	super("Nickel", 0.05, "USD");
+    smelt = new Smelt2();
     } 
 }

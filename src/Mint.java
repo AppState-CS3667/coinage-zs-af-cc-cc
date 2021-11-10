@@ -7,13 +7,29 @@
 public abstract class Mint {
     public Coin makeCoin(double den) {
         Coin c;
+        boolean b = true;
         c = createCoin(den);
 
-        //c.manufacture();
-        //c.inspection();
-        //c.buffing();
-        //c.smoothing();
-
+        if (c != Coin.NULL)
+        {
+            c.manufacture(c);
+            b = c.inspect(c);
+            if (!b)
+            {
+                return Coin.NULL;
+            }
+            b = c.buff(c);
+            if (!b)
+            {
+                return Coin.NULL;
+            }
+            b = c.smooth(c);
+            if (!b)
+            {
+                return Coin.NULL;
+            }
+        }
+        
         return c;
     }
 

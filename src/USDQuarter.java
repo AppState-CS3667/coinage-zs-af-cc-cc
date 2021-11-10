@@ -14,5 +14,6 @@ public class USDQuarter extends Coin {
     */
     public USDQuarter() {
 	super("Quarter", 0.25, "USD");
+    smelt = new Smelt3();
     } 
 }
