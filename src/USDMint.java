@@ -5,6 +5,21 @@
  * @version Nov 2021
  */
 public class USDMint extends Mint {
+
+    private static USDMint instance;
+    
+    private USDMint()
+    {
+        super();
+    }
+
+    public static USDMint getInstance()
+    {
+        if(instance == null)
+            instance = new USDMint();
+        return instance;
+    }
+
     protected Coin createCoin(double den) {
         if (den == 1.00)
         {
