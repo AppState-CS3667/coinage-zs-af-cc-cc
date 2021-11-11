@@ -89,7 +89,7 @@ public class SmelterTest {
     }
 
     @Test
-    public void testCode() {
+    public void testSmooth() {
 	    
 	 Coin usdpenny = new USDPenny();
 	 Coin usdnickel = new USDNickel();
@@ -170,7 +170,7 @@ public class SmelterTest {
     }
 
     @Test
-    public void testToString() {
+    public void testBuff() {
 	    
 	 Coin usdpenny = new USDPenny();
 	 Coin usdnickel = new USDNickel();
