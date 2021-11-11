@@ -1,14 +1,11 @@
 # coins-starter
 
-**Push to your feature branch and review before moving it over to Test branch for testing**
-
-F1 - Coin factory (Adam: makefile, Zach: factory)
+F1 - Coin factory (Adam: Mint (USDMint), Zach: factory)
 
 F2 - Smelting strategy (C. Carter)
 
-F3 - Mint singleton
+F3 - Mint singleton (C. Caggia)
 
-F4 - Coin null
+F4 - Coin null (Adam)
 
-F5 - Mint concrete (for another country)
-
+F5 - Mint concrete (for another country) (C. Caggia)

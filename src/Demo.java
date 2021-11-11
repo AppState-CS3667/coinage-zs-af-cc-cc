@@ -12,7 +12,7 @@ public class Demo {
         {
             if (args[0].equalsIgnoreCase("USD"))
             {
-                m = new USDMint();
+                m = USDMint.getInstance();
             }
             else if (args[0].equalsIgnoreCase("CAD"))
             {
@@ -30,11 +30,11 @@ public class Demo {
 
             if (s.equalsIgnoreCase("USD"))
             {
-                m = new USDMint();
+                m =  USDMint.getInstance();
             }
             else if (s.equalsIgnoreCase("CAD"))
             {
-                //m = new CADMint();
+                m = CADMint.getInstance();
             }
         }
 

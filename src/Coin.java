@@ -77,6 +77,7 @@ public abstract class Coin {
 
     public static Coin NULL = new NullCoin();
 
+
     protected static Random rng = new Random();
 	/**
 	 * Takes a coin object, and returns true if it passes inspection or false if it fails.
