@@ -13,6 +13,7 @@ public class CADDime extends Coin {
        CADDime knows its attribute values.
     */
     public CADDime() {
-	super("Dime", 0.1, "USD");
+	super("Dime", 0.1, "CAD");
+    smelt = new Smelt5();
     } 
 }

@@ -9,12 +9,10 @@ import java.util.Random;
 public class USDMint extends Mint {
 
     private static USDMint instance;
-    private Random rand;
     
     private USDMint()
     {
         super();
-        rand = new Random(System.currentTimeMillis());
     }
 
     public static USDMint getInstance()
@@ -53,12 +51,6 @@ public class USDMint extends Mint {
 	  default: c = Coin.NULL;
 	}
 	
-	int temp = rand.nextInt(12) + 1;
-        if(temp == 1)
-	{
-		System.out.println("Oops! This coin didn't meet quality control standards.");
-		c = Coin.NULL;
-	}
 
 	return c;
 		

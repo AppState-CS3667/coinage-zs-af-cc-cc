@@ -14,5 +14,6 @@ public class CADQuarter extends Coin {
     */
     public CADQuarter() {
 	super("Quarter", 0.25, "CAD");
+    smelt = new Smelt5();
     } 
 }

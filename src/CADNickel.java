@@ -14,5 +14,6 @@ public class CADNickel extends Coin {
     */
     public CADNickel() {
 	super("Nickel", 0.05, "CAD");
+    smelt = new Smelt5();
     } 
 }

@@ -14,5 +14,6 @@ public class CADFiftyCent extends Coin {
     */
     public CADFiftyCent() {
 	super("FiftyCent", 0.5, "CAD");
+    smelt = new Smelt5();
     } 
 }

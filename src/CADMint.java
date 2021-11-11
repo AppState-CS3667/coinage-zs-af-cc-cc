@@ -9,12 +9,10 @@ import java.util.Random;
 public class CADMint extends Mint {
 
     private static CADMint instance;
-    private Random rand;
     
     private CADMint()
     {
         super();
-        rand = new Random(System.currentTimeMillis());
     }
 
     public static CADMint getInstance()
@@ -51,14 +49,6 @@ public class CADMint extends Mint {
 	  break;
 
 	  default:   c = Coin.NULL;
-	}
-	
-	// 1/12 chance inspection fails
-        int temp = rand.nextInt(12) + 1;
-	if(temp == 1)
-	{
-		System.out.println("Oops! This coin didn't meet quality control standards.");
-		c = Coin.NULL;
 	}
 
 	return c;

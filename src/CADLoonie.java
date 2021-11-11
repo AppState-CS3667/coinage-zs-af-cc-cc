@@ -14,5 +14,6 @@ public class CADLoonie extends Coin {
     */
     public CADLoonie() {
 	super("Loonie", 1.0, "CAD");
+    smelt = new Smelt5();
     } 
 }

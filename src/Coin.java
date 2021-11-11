@@ -78,13 +78,13 @@ public abstract class Coin {
     public static Coin NULL = new NullCoin();
 
 
-    protected static Random rng = new Random();
+    protected static Random rng = new Random(System.currentTimeMillis());
 	/**
 	 * Takes a coin object, and returns true if it passes inspection or false if it fails.
 	 * 		Will fail 1 / 12 times.
 	 */
 	public boolean inspect(Coin c) {
-		if(rng.nextInt(12) == 0) {
+		if(rng.nextInt(12) + 1 == 1) {
 			System.out.println("Inspection of " + c.getCode() +  " " + c.getType() + " Failed.");
 			return false;
 		}
@@ -96,7 +96,7 @@ public abstract class Coin {
 	 * 		Will fail 1 / 1000 times.
 	 */
 	public boolean smooth(Coin c) {
-		if(rng.nextInt(1000) == 0) {
+		if(rng.nextInt(1000) + 1 == 1) {
 			System.out.println("Smoothing of " + c.getCode() +  " " + c.getType() + " Failed.");
 			return false;
 		}
@@ -108,7 +108,7 @@ public abstract class Coin {
 	 * 		Will fail 1 / 1000 times.
 	 */
 	public boolean buff(Coin c) {
-		if(rng.nextInt(1000) == 0) {
+		if(rng.nextInt(1000) + 1 == 1) {
 			System.out.println("Buffing of " + c.getCode() +  " " + c.getType() + " Failed.");
 			return false;
 		}
