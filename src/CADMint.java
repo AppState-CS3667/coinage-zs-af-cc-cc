@@ -4,46 +4,46 @@
  * @author Adam Farshchi, Chris Caggia
  * @version Nov 2021
  */
-public class USDMint extends Mint {
+public class CADMint extends Mint {
 
-    private static USDMint instance;
+    private static CADMint instance;
     
-    private USDMint()
+    private CADMint()
     {
         super();
     }
 
-    public static USDMint getInstance()
+    public static CADMint getInstance()
     {
         if(instance == null)
-            instance = new USDMint();
+            instance = new CADMint();
         return instance;
     }
 
     protected Coin createCoin(double den) {
         if (den == 1.00)
         {
-            return new USDDollar();
+            return new CADLoonie();
         }
         else if (den == .50)
         {
-            return new USDHalfDollar();
+            return new CADFiftyCent();
         }
         else if (den == .25)
         {
-            return new USDQuarter();
+            return new CADQuarter();
         }
         else if (den == .10)
         {
-            return new USDDime();
+            return new CADDime();
         }
         else if (den == .05)
         {
-            return new USDNickel();
+            return new CADNickel();
         }
-        else if (den == .01)
+        else if (den == 2.00)
         {
-            return new USDPenny();
+            return new CADToonie();
         }
         else
         {

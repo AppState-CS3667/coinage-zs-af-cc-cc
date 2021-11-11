@@ -34,7 +34,7 @@ public class Demo {
             }
             else if (s.equals("CAD"))
             {
-                //m = new CADMint();
+                m = CADMint.getInstance();
             }
         }
 
