@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * USDMint creates US coin objects.
  *
@@ -7,10 +9,12 @@
 public class CADMint extends Mint {
 
     private static CADMint instance;
+    private Random rand;
     
     private CADMint()
     {
         super();
+        rand = new Random(System.currentTimeMillis());
     }
 
     public static CADMint getInstance()
@@ -20,34 +24,39 @@ public class CADMint extends Mint {
         return instance;
     }
 
-    protected Coin createCoin(double den) {
-        if (den == 1.00)
-        {
-            return new CADLoonie();
-        }
-        else if (den == .50)
-        {
-            return new CADFiftyCent();
-        }
-        else if (den == .25)
-        {
-            return new CADQuarter();
-        }
-        else if (den == .10)
-        {
-            return new CADDime();
-        }
-        else if (den == .05)
-        {
-            return new CADNickel();
-        }
-        else if (den == 2.00)
-        {
-            return new CADToonie();
-        }
-        else
-        {
-            return Coin.NULL;
-        }
+    protected Coin createCoin(double den)
+    {
+
+	int cents = (int)(den * 100);
+	Coin c;
+
+	switch(cents)
+	{	
+	  case 200: c = new CADToonie();
+	  break;
+
+	  case 100: c = new CADLoonie();
+	  break;
+
+	  case 50: c = new CADFiftyCent();
+	  break;
+
+	  case 25: c = new CADQuarter();
+	  break;
+
+	  case 10: c = new CADDime();
+	  break;
+
+	  case 05: c = new CADNickel();
+	  break;
+
+	  default:   c = Coin.NULL;
+	}
+	
+	// 1/12 chance inspection fails
+	if(rand.nextInt(11) + 1 == 1)
+		c = Coin.NULL;
+
+	return c;
     }
 }
