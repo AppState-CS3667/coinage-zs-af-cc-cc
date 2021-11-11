@@ -54,8 +54,12 @@ public class CADMint extends Mint {
 	}
 	
 	// 1/12 chance inspection fails
-	if(rand.nextInt(11) + 1 == 1)
+        int temp = rand.nextInt(12) + 1;
+	if(temp == 1)
+	{
+		System.out.println("Oops! This coin didn't meet quality control standards.");
 		c = Coin.NULL;
+	}
 
 	return c;
     }

@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * USDMint creates US coin objects.
  *
@@ -7,10 +9,12 @@
 public class USDMint extends Mint {
 
     private static USDMint instance;
+    private Random rand;
     
     private USDMint()
     {
         super();
+        rand = new Random(System.currentTimeMillis());
     }
 
     public static USDMint getInstance()
@@ -21,33 +25,42 @@ public class USDMint extends Mint {
     }
 
     protected Coin createCoin(double den) {
-        if (den == 1.00)
-        {
-            return new USDDollar();
-        }
-        else if (den == .50)
-        {
-            return new USDHalfDollar();
-        }
-        else if (den == .25)
-        {
-            return new USDQuarter();
-        }
-        else if (den == .10)
-        {
-            return new USDDime();
-        }
-        else if (den == .05)
-        {
-            return new USDNickel();
-        }
-        else if (den == .01)
-        {
-            return new USDPenny();
-        }
-        else
-        {
-            return Coin.NULL;
-        }
+
+	int cents = (int) (den * 100);
+
+	Coin c;
+
+	switch(cents)
+	{
+	  case 100: c = new USDDollar();
+	  break;
+
+	  case 50: c = new USDHalfDollar();
+	  break;
+
+	  case 25: c = new USDQuarter();
+	  break;
+
+	  case 10: c = new USDDime();
+	  break;
+
+	  case 5: c = new USDNickel();
+	  break;
+
+	  case 1: c = new USDPenny();
+	  break;
+	  
+	  default: c = Coin.NULL;
+	}
+	
+	int temp = rand.nextInt(12) + 1;
+        if(temp == 1)
+	{
+		System.out.println("Oops! This coin didn't meet quality control standards.");
+		c = Coin.NULL;
+	}
+
+	return c;
+		
     }
 }
