@@ -10,11 +10,11 @@ public class Demo {
 
         if (args.length != 0)
         {
-            if (args[0].equals("USD"))
+            if (args[0].equalsIgnoreCase("USD"))
             {
                 m = USDMint.getInstance();
             }
-            else if (args[0].equals("CAD"))
+            else if (args[0].equalsIgnoreCase("CAD"))
             {
                 //m = new CADMint();
             }
@@ -26,13 +26,13 @@ public class Demo {
                 System.out.print("Please input coin mint country code (USD/CAD): ");
                 s = keyboard.nextLine();
             }
-            while (!s.equals("USD") && !s.equals("CAD"));
+            while (!s.equalsIgnoreCase("USD") && !s.equalsIgnoreCase("CAD"));
 
-            if (s.equals("USD"))
+            if (s.equalsIgnoreCase("USD"))
             {
                 m =  USDMint.getInstance();
             }
-            else if (s.equals("CAD"))
+            else if (s.equalsIgnoreCase("CAD"))
             {
                 m = CADMint.getInstance();
             }
@@ -40,7 +40,7 @@ public class Demo {
 
         do 
         {
-            System.out.print("Enter coin denomination to be minted (Type 0 to quit): ");
+            System.out.print("\nEnter coin denomination to be minted (Type 0 to quit): ");
             d = keyboard.nextDouble();
             if (d != 0)
             {

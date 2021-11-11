@@ -14,5 +14,6 @@ public class USDDime extends Coin {
     */
     public USDDime() {
 	super("Dime", 0.10, "USD");
+    smelt = new Smelt3();
     } 
 }
