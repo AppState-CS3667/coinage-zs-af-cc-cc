@@ -133,6 +133,12 @@ public class CoinTest {
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
+	    
+	expectedResult = "";
+	testOutput = Coin.NULL.getType();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
     }
 
     @Test
@@ -225,6 +231,12 @@ public class CoinTest {
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
+	    
+	expectedResult = 0;
+	testOutput = Coin.NULL.getValue();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
     }
 
     @Test
@@ -304,6 +316,12 @@ public class CoinTest {
 		   + "' but got '" + testOutput + "'.");
 
 	testOutput = cadtoonie.getCode();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+	    
+	expectedResult = "";
+	testOutput = Coin.NULL.getCode();
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
@@ -396,6 +414,12 @@ public class CoinTest {
 
 	expectedResult = "[CADToonie: worth $2.00]";
 	testOutput = cadtoonie.toString();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+	    
+	expectedResult = "[: worth $0.00]";
+	testOutput = Coin.NULL.toString();
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
