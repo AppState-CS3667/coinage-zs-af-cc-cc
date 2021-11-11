@@ -55,7 +55,7 @@ public abstract class Coin {
     */
     public String toString() {
 	return "[" 
-	    + getCode() + getType() + ": worth $" + getValue()  + "]";
+	    + getCode() + getType() + ": worth $" + String.format("%.2f", getValue())  + "]";
     }
 
     /**

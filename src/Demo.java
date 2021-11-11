@@ -16,7 +16,7 @@ public class Demo {
             }
             else if (args[0].equalsIgnoreCase("CAD"))
             {
-                //m = new CADMint();
+                m = CADMint.getInstance();
             }
         }
         else
