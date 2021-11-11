@@ -74,6 +74,43 @@ public class MintTest {
 	assertTrue(expectedResult.toString().equals(testOutput.toString()),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = new CADNickel();
+	testOutput = cadmint.createCoin(.05);
+	assertTrue(expectedResult.toString().equals(testOutput.toString()),
+			"Expected:'" + expectedResult 
+			+ "' but got '" + testOutput + "'.");
+
+	expectedResult = new CADDime();
+	testOutput = cadmint.createCoin(.1);
+	assertTrue(expectedResult.toString().equals(testOutput.toString()),
+			"Expected:'" + expectedResult 
+			+ "' but got '" + testOutput + "'.");
+
+	expectedResult = new CADQuarter();
+	testOutput = cadmint.createCoin(.25);
+	assertTrue(expectedResult.toString().equals(testOutput.toString()),
+			"Expected:'" + expectedResult 
+			+ "' but got '" + testOutput + "'.");
+	
+	expectedResult = new CADFiftyCent();
+	testOutput = cadmint.createCoin(.5);
+	assertTrue(expectedResult.toString().equals(testOutput.toString()),
+			"Expected:'" + expectedResult 
+			+ "' but got '" + testOutput + "'.");
+
+	expectedResult = new CADLoonie();
+	testOutput = cadmint.createCoin(1);
+	assertTrue(expectedResult.toString().equals(testOutput.toString()),
+			"Expected:'" + expectedResult 
+			+ "' but got '" + testOutput + "'.");
+
+	expectedResult = new CADToonie();
+	testOutput = cadmint.createCoin(2);
+	assertTrue(expectedResult.toString().equals(testOutput.toString()),
+			"Expected:'" + expectedResult 
+			+ "' but got '" + testOutput + "'.");
+		   
     }
 
     
