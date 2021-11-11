@@ -18,12 +18,12 @@ public abstract class Mint {
             {
                 return Coin.NULL;
             }
-            b = c.buff(c);
+            b = c.smooth(c);
             if (!b)
             {
                 return Coin.NULL;
             }
-            b = c.smooth(c);
+            b = c.buff(c);
             if (!b)
             {
                 return Coin.NULL;
