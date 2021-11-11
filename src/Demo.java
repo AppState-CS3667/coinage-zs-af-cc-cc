@@ -13,10 +13,12 @@ public class Demo {
             if (args[0].equalsIgnoreCase("USD"))
             {
                 m = USDMint.getInstance();
+                System.out.println("Using USD: U.S. Coin Factory");
             }
             else if (args[0].equalsIgnoreCase("CAD"))
             {
                 m = CADMint.getInstance();
+                System.out.println("Using CAD: Canadian Coin Factory");
             }
         }
         else
@@ -31,10 +33,12 @@ public class Demo {
             if (s.equalsIgnoreCase("USD"))
             {
                 m =  USDMint.getInstance();
+                System.out.println("Using USD: U.S. Coin Factory");
             }
             else if (s.equalsIgnoreCase("CAD"))
             {
                 m = CADMint.getInstance();
+                System.out.println("Using CAD: Canadian Coin Factory");
             }
         }
 
