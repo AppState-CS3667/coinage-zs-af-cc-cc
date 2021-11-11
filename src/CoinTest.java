@@ -189,25 +189,25 @@ public class CoinTest {
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
 
-	expectedResult = "[USDNickel: worth $0.05];
+	expectedResult = "[USDNickel: worth $0.05]";
 	testOutput = usdnickel.toString();
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
 
-	expectedResult = "[USDDime: worth $0.10];
+	expectedResult = "[USDDime: worth $0.10]";
 	testOutput = usddime.toString();
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
 
-	expectedResult = "[USDQuarter: worth $0.25];
+	expectedResult = "[USDQuarter: worth $0.25]";
 	testOutput = usdquarter.toString();
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
 
-	expectedResult = "[USDHalf Dollar: worth $0.50];
+	expectedResult = "[USDHalf Dollar: worth $0.50]";
 	testOutput = usdhalfdollar.toString();
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
