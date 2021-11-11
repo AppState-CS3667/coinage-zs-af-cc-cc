@@ -16,6 +16,13 @@ public class CoinTest {
 	    Coin usdquarter = new USDQuarter();
 	    Coin usdhalfdollar = new USDHalfDollar();
 	    Coin usddollar = new USDDollar();
+		
+	 Coin cadnickel = new CADNickel();
+	 Coin caddime = new CADDime();
+	 Coin cadquarter = new CADQuarter();
+	 Coin cadfiftycent = new CADFiftyCent();
+	 Coin cadloonie = new CADLoonie();
+	 Coin cadtoonie = new CADToonie();
 
 	    assertNotNull(usdpenny);
 	    assertNotNull(usdnickel);
@@ -23,6 +30,13 @@ public class CoinTest {
 	    assertNotNull(usdquarter);
 	    assertNotNull(usdhalfdollar);
 	    assertNotNull(usddollar);
+		
+	    assertNotNull(cadnickel);
+	    assertNotNull(caddime);
+	    assertNotNull(cadquarter);
+	    assertNotNull(cadfiftycent);
+	    assertNotNull(cadloonie);
+	    assertNotNull(cadtoonie);
 	}
 	catch (Exception e) {
 	    fail("Constructor threw exception: " + e.getMessage());
@@ -37,6 +51,13 @@ public class CoinTest {
 	 Coin usdquarter = new USDQuarter();
 	 Coin usdhalfdollar = new USDHalfDollar();
 	 Coin usddollar = new USDDollar();
+	    
+	 Coin cadnickel = new CADNickel();
+	 Coin caddime = new CADDime();
+	 Coin cadquarter = new CADQuarter();
+	 Coin cadfiftycent = new CADFiftyCent();
+	 Coin cadloonie = new CADLoonie();
+	 Coin cadtoonie = new CADToonie();
 
 	String expectedResult = null;
 	String testOutput = null;
@@ -76,6 +97,42 @@ public class CoinTest {
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
+	    
+	expectedResult = "Nickel";
+	testOutput = cadnickel.getType();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = "Dime";
+	testOutput = caddime.getType();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = "Quarter";
+	testOutput = cadquarter.getType();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = "FiftyCent";
+	testOutput = cadfiftycent.getType();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = "Loonie";
+	testOutput = cadloonie.getType();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = "Toonie";
+	testOutput = cadtoonie.getType();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
     }
 
     @Test
@@ -86,6 +143,13 @@ public class CoinTest {
 	 Coin usdquarter = new USDQuarter();
 	 Coin usdhalfdollar = new USDHalfDollar();
 	 Coin usddollar = new USDDollar();
+	    
+	 Coin cadnickel = new CADNickel();
+	 Coin caddime = new CADDime();
+	 Coin cadquarter = new CADQuarter();
+	 Coin cadfiftycent = new CADFiftyCent();
+	 Coin cadloonie = new CADLoonie();
+	 Coin cadtoonie = new CADToonie();
 
 	double expectedResult = null;
 	double testOutput = null;
@@ -125,6 +189,42 @@ public class CoinTest {
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
+	    
+	expectedResult = 0.05;
+	testOutput = cadnickel.getValue();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = 0.10
+	testOutput = caddime.getValue();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = 0.25;
+	testOutput = cadquarter.getValue();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = 0.50;
+	testOutput = cadfiftycent.getValue();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = 1.00;
+	testOutput = cadloonie.getValue();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = 2.00;
+	testOutput = cadtoonie.getValue();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
     }
 
     @Test
@@ -135,6 +235,13 @@ public class CoinTest {
 	 Coin usdquarter = new USDQuarter();
 	 Coin usdhalfdollar = new USDHalfDollar();
 	 Coin usddollar = new USDDollar();
+	    
+	 Coin cadnickel = new CADNickel();
+	 Coin caddime = new CADDime();
+	 Coin cadquarter = new CADQuarter();
+	 Coin cadfiftycent = new CADFiftyCent();
+	 Coin cadloonie = new CADLoonie();
+	 Coin cadtoonie = new CADToonie();
 
 	String expectedResult = null;
 	String testOutput = null;
@@ -169,6 +276,37 @@ public class CoinTest {
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
+	    
+	expectedResult = "CAD";
+	testOutput = cadnickel.getCode();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	testOutput = caddime.getCode();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	testOutput = cadquarter.getCode();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	testOutput = cadfiftycent.getCode();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	testOutput = cadloonie.getCode();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	testOutput = cadtoonie.getCode();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
     }
 
     @Test
@@ -179,6 +317,13 @@ public class CoinTest {
 	 Coin usdquarter = new USDQuarter();
 	 Coin usdhalfdollar = new USDHalfDollar();
 	 Coin usddollar = new USDDollar();
+	    
+	 Coin cadnickel = new CADNickel();
+	 Coin caddime = new CADDime();
+	 Coin cadquarter = new CADQuarter();
+	 Coin cadfiftycent = new CADFiftyCent();
+	 Coin cadloonie = new CADLoonie();
+	 Coin cadtoonie = new CADToonie();
 
 	String expectedResult = null;
 	String testOutput = null;
@@ -215,6 +360,42 @@ public class CoinTest {
 
 	expectedResult = "[USDDollar: worth $1.00]";
 	testOutput = usddollar.toString();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+	    
+	expectedResult = "[CADNickel: worth $0.05]";
+	testOutput = cadnickel.toString();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = "[CADDime: worth $0.10]";
+	testOutput = caddime.toString();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = "[CADQuarter: worth $0.25]";
+	testOutput = cadquarter.toString();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = "[CADFiftyCent: worth $0.50]";
+	testOutput = cadfiftycent.toString();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = "[CADLoonie: worth $1.00]";
+	testOutput = cadloonie.toString();
+	assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+
+	expectedResult = "[CADToonie: worth $2.00]";
+	testOutput = cadtoonie.toString();
 	assertTrue(expectedResult.equals(testOutput),
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
